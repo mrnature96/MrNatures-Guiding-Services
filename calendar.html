@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Nature's Guiding Services</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="main.css">
+    <style>
+  
+  :root {
+    --clay: #C96F3A;
+    --amber: #D89B2D;
+    --warm-brown: #5A3E2B;
+    --earth-olive: #7A8450;
+    --cream: #F7F2E7;
+    --charcoal: #2A2A2A;
+
+    --font-header: 'Lora', serif;
+    --font-body: 'Nunito', sans-serif;
+
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 48px;
+    --space-6: 64px;
+  }
+</style>
+   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header-warm">
+    <nav class="main-nav">
+        <div class="logo">Mr. Nature's Guiding Services</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="guiding-services.html">Guiding Services</a></li>
+            <li><a href="book.html">Book With Us</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="photos.html">Photos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="calendar-hero">
+    <h1>Calendar & Availability</h1>
+    <p>Check availability for intensives, expeditions, retreats, and custom events.</p>
+</section>
+
+<!-- INTRO -->
+<section class="calendar-intro">
+    <p>
+        Availability shifts throughout the year depending on weather, group size,
+        and the type of experience you're planning. Use the calendar below to get
+        a general sense of open dates. For exact scheduling, reach out through the
+        booking page and we’ll coordinate directly.
+    </p>
+</section>
+
+<!-- MONTH SELECTOR -->
+<section class="calendar-selector">
+    <label for="month-select">Select Month:</label>
+    <select id="month-select">
+        <option value="nov-2026">November 2026</option>
+        <option value="dec-2026">December 2026</option>
+        <option value="jan-2027">January 2027</option>
+    </select>
+</section>
+
+<!-- LEGEND -->
+<section class="calendar-legend">
+    <h2>Legend</h2>
+    <ul>
+        <li><span class="cal-dot available"></span> Available</li>
+        <li><span class="cal-dot pending"></span> Pending / Hold</li>
+        <li><span class="cal-dot booked"></span> Booked</li>
+    </ul>
+</section>
+
+<!-- CALENDAR GRID -->
+<section class="calendar-grid-section">
+    <h2>Upcoming Availability</h2>
+
+    <div class="calendar-grid">
+
+        <!-- NOVEMBER -->
+        <div class="calendar-month" id="nov-2026">
+            <h3>November 2026</h3>
+            <div class="month-days">
+                <!-- Example days with data-date -->
+                <div class="day available" data-date="2026-11-01">1</div>
+                <div class="day available" data-date="2026-11-02">2</div>
+                <div class="day pending" data-date="2026-11-03">3</div>
+                <div class="day booked" data-date="2026-11-04">4</div>
+                <div class="day available" data-date="2026-11-05">5</div>
+                <div class="day available" data-date="2026-11-06">6</div>
+                <div class="day booked" data-date="2026-11-07">7</div>
+                <div class="day pending" data-date="2026-11-08">8</div>
+                <div class="day available" data-date="2026-11-09">9</div>
+                <div class="day available" data-date="2026-11-10">10</div>
+                <div class="day booked" data-date="2026-11-11">11</div>
+                <div class="day available" data-date="2026-11-12">12</div>
+                <div class="day pending" data-date="2026-11-13">13</div>
+                <div class="day available" data-date="2026-11-14">14</div>
+                <div class="day booked" data-date="2026-11-15">15</div>
+                <div class="day available" data-date="2026-11-16">16</div>
+                <div class="day available" data-date="2026-11-17">17</div>
+                <div class="day pending" data-date="2026-11-18">18</div>
+                <div class="day booked" data-date="2026-11-19">19</div>
+                <div class="day available" data-date="2026-11-20">20</div>
+                <div class="day available" data-date="2026-11-21">21</div>
+                <div class="day booked" data-date="2026-11-22">22</div>
+                <div class="day pending" data-date="2026-11-23">23</div>
+                <div class="day available" data-date="2026-11-24">24</div>
+                <div class="day available" data-date="2026-11-25">25</div>
+                <div class="day booked" data-date="2026-11-26">26</div>
+                <div class="day available" data-date="2026-11-27">27</div>
+                <div class="day pending" data-date="2026-11-28">28</div>
+                <div class="day available" data-date="2026-11-29">29</div>
+                <div class="day booked" data-date="2026-11-30">30</div>
+            </div>
+        </div>
+
+        <!-- DECEMBER -->
+        <div class="calendar-month" id="dec-2026" style="display:none;">
+            <h3>December 2026</h3>
+            <div class="month-days">
+                <!-- You can fill these in manually or leave blank until Outlook sync -->
+                <div class="day available" data-date="2026-12-01">1</div>
+                <div class="day available" data-date="2026-12-02">2</div>
+                <div class="day available" data-date="2026-12-03">3</div>
+                <div class="day available" data-date="2026-12-04">4</div>
+                <!-- etc -->
+            </div>
+        </div>
+
+        <!-- JANUARY -->
+        <div class="calendar-month" id="jan-2027" style="display:none;">
+            <h3>January 2027</h3>
+            <div class="month-days">
+                <div class="day available" data-date="2027-01-01">1</div>
+                <div class="day available" data-date="2027-01-02">2</div>
+                <div class="day available" data-date="2027-01-03">3</div>
+                <!-- etc -->
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-booking">
+  <h2>Ready to Reserve Your Dates?</h2>
+  <p>Reach out and we’ll help you secure the perfect window for your adventure.</p>
+  <a href="book.html" class="btn-primary cta-button">Start Your Booking</a>
+</section>
+
+</main>
+
+<!-- MONTH SELECTOR SCRIPT -->
+<script>
+document.getElementById('month-select').addEventListener('change', function() {
+    const selected = this.value;
+
+    document.querySelectorAll('.calendar-month').forEach(month => {
+        month.style.display = 'none';
+    });
+
+    document.getElementById(selected).style.display = 'block';
+});
+</script>
+
+<!-- OUTLOOK SYNC PLACEHOLDER -->
+<script>
+// When your Outlook backend is ready, this function will auto-mark days.
+async function loadAvailability() {
+    try {
+        const res = await fetch("/availability.json");
+        const availability = await res.json();
+
+        document.querySelectorAll(".day").forEach(day => {
+            const date = day.dataset.date;
+            if (availability[date]) {
+                day.classList.add(availability[date]);
+            }
+        });
+    } catch (err) {
+        console.log("Availability sync not active yet.");
+    }
+}
+
+// Uncomment this once your backend is live:
+// loadAvailability();
+</script>
+
+</body>
+</html>
