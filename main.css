@@ -31,9 +31,9 @@ header.header-warm {
   list-style: none;
   display: flex;
   gap: var(--space-3);
-  margin: 0;
-  padding: 0;
+  flex-wrap: wrap;
 }
+
 
 .nav-links li a {
   font-family: var(--font-body);
@@ -51,51 +51,39 @@ header.header-warm {
   color: var(--cream);
 }
 /* ====== HERO SECTION ====== */
+
 .hero {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: var(--space-5) var(--space-4);
-  gap: var(--space-5);
+  gap: var(--space-0);
+  padding: var(--space-4) var(--space-4);
+  background: var(--earth-olive);
+  color: var(--cream);
 }
 
-.hero-image-wrap {
-  flex: 1;
-  display: flex;
-  justify-content: flex-start;
+.hero h1 {
+  font-family: var(--font-header);
+  font-size: 2.6rem;
+  margin-bottom: var(--space-2);
+  color: var(--cream);
+}
+
+.hero p {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  margin-bottom: var(--space-3);
+  color: var(--cream);
 }
 
 .hero-image {
   width: 100%;
-  max-width: 480px;
-  max-height: 360px;
+  max-width: 240px;
+  max-height: 173.3px;
   object-fit: cover;
   border-radius: 12px;
+  border: 4px solid var(--cream);
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-}
-
-.hero-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.hero-title {
-  font-family: var(--font-header);
-  font-size: 2.6rem;
-  color: var(--warm-brown);
-  margin-bottom: var(--space-2);
-}
-
-.hero-content p {
-  font-family: var(--font-body);
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: var(--space-3);
-  color: var(--charcoal);
 }
 /* ====== ABOUT SECTION ====== */
 .about {
@@ -240,28 +228,7 @@ header.header-warm {
   line-height: 1.7;
   color: var(--charcoal);
 }
-.cta-booking {
-  text-align: center;
-  background: var(--earth-olive);
-  color: var(--cream);
-  padding: var(--space-6) var(--space-4);
-  margin-top: var(--space-6);
-}
 
-.cta-booking h2 {
-  font-family: var(--font-header);
-  margin-bottom: var(--space-2);
-}
-
-.cta-booking p {
-  font-family: var(--font-body);
-  margin-bottom: var(--space-3);
-}
-
-.cta-button {
-  padding: var(--space-2) var(--space-4);
-  font-size: 1.2rem;
-}
 .site-footer {
   text-align: center;
   padding: var(--space-4);
@@ -375,7 +342,6 @@ header.header-warm {
   padding: var(--space-6) var(--space-4);
   background: var(--earth-olive);
   color: var(--cream);
-  border-bottom: 4px solid var(--warm-brown);
 }
 
 .booking-intro {
@@ -427,105 +393,60 @@ header.header-warm {
   padding: var(--space-2) var(--space-4);
   font-size: 1.2rem;
 }
-/* ====== CALENDAR PAGE ====== */
-
-.calendar-hero {
+/* ====== About PAGE ====== */
+.about-hero {
   text-align: center;
-  padding: var(--space-6) var(--space-4);
+  padding: var(--space-5);
   background: var(--earth-olive);
   color: var(--cream);
-  border-bottom: 4px solid var(--warm-brown);
 }
 
-.calendar-intro {
-  max-width: 900px;
-  margin: var(--space-5) auto;
-  padding: var(--space-4);
-  text-align: center;
-  font-family: var(--font-body);
-  line-height: 1.7;
-}
-
-.calendar-legend {
-  max-width: 600px;
-  margin: var(--space-4) auto;
-  padding: var(--space-4);
-  background: var(--cream);
+.about-hero-image {
+  width: 100%;
+  max-width: 240px;
+  max-height: 173.3px;
+  object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  border: 4px solid var(--cream);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-.calendar-legend h2 {
+.about-hero h1 {
   font-family: var(--font-header);
-  color: var(--warm-brown);
+  font-size: 2.6rem;
   margin-bottom: var(--space-2);
 }
 
-.calendar-legend ul {
-  list-style: none;
-  padding: 0;
-  line-height: 2;
+.about-hero p {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
 }
 
-.cal-dot {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  margin-right: var(--space-1);
-}
-
-.available { background: var(--earth-olive); }
-.pending   { background: var(--amber); }
-.booked    { background: var(--clay); }
-
-.calendar-grid-section {
-  max-width: 1200px;
-  margin: var(--space-6) auto;
-  padding: var(--space-4);
-}
-
-.calendar-grid-section h2 {
-  font-family: var(--font-header);
-  color: var(--warm-brown);
+/* ====== Photos PAGE ====== */
+.photos-hero {
   text-align: center;
-  margin-bottom: var(--space-4);
-}
-
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: var(--space-4);
-}
-
-.calendar-month {
-  background: var(--cream);
-  padding: var(--space-4);
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-}
-
-.calendar-month h3 {
-  font-family: var(--font-header);
-  color: var(--warm-brown);
-  margin-bottom: var(--space-3);
-  text-align: center;
-}
-
-.month-days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: var(--space-1);
-}
-
-.day {
-  padding: var(--space-2);
-  text-align: center;
-  border-radius: 8px;
-  font-weight: 600;
+  padding: var(--space-5);
+  background: var(--earth-olive);
   color: var(--cream);
 }
 
-.day.available { background: var(--earth-olive); }
-.day.pending   { background: var(--amber); }
-.day.booked    { background: var(--clay); }
+.photos-hero-image {
+  width: 100%;
+  max-width: 240px;
+  max-height: 173.3px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 4px solid var(--cream);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.photos-hero h1 {
+  font-family: var(--font-header);
+  font-size: 2.6rem;
+  margin-bottom: var(--space-2);
+}
+
+.photos-hero p {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+}
