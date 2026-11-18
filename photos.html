@@ -101,6 +101,64 @@
 
 
 </div>
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
 
+    <span class="prev">&#10094;</span>
+
+    <img class="lightbox-content" id="lightbox-img">
+
+    <span class="next">&#10095;</span>
+</div>
+	<script>
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+const images = document.querySelectorAll(".gallery img");
+
+let currentIndex = 0;
+
+images.forEach((img, index) => {
+    img.addEventListener("click", () => {
+        currentIndex = index;
+        lightbox.style.display = "block";
+        lightboxImg.src = img.src;
+    });
+});
+
+document.querySelector(".next").addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    currentIndex++;
+
+    if (currentIndex >= images.length) {
+        currentIndex = 0;
+    }
+
+    lightboxImg.src = images[currentIndex].src;
+});
+
+document.querySelector(".prev").addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    currentIndex--;
+
+    if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+    }
+
+    lightboxImg.src = images[currentIndex].src;
+});
+
+document.querySelector(".close").addEventListener("click", () => {
+    lightbox.style.display = "none";
+});
+
+lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+        lightbox.style.display = "none";
+    }
+});
+</script>
 </body>
 </html>
